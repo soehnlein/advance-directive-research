@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>A Comparison of California Advance Directive Forms</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-1');
+        var mapOptions = {
+          center: new google.maps.LatLng(38.578738, -121.489891),
+          zoom: 12,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+
+  <body>
+
+    <header class="header">
+      <h1>
+        A Comparison of<br>
+        <span>California Advance Directive Forms</span>
+      </h1>
+      <h3 class="subhead">A project by Patrice Soehnlein of the <a href="http://arts.ucdavis.edu/design">UC Davis Design MFA Program.</a></h3>
+      <h3>Compare qualities of advance directive forms commonly used in California.</h3>
+      <h2>Explore by:</h2>
+    </header>
+
+    <nav>
+      <a href="#form">Form</a>
+      <a href="#attribute">Attribute</a>
+      <a href="#location">Location</a>
+    </nav>
+
+     <div class="content">
+      
+      <section id="forms">
+        <ul class="form-names">
+          <li id="form-1">
+            <div class="layer"><a href="#cha">California Hospital Association</a></div>
+          </li>
+
+          <li id="form-2">
+            <div class="layer">
+              <a href="#cma">California Medical Association</a>
+            </div>
+          </li>
+
+          <li id="form-3">
+            <div class="layer">
+              <a href="#cc">Caring Connections</a>
+            </div>
+          </li>
+
+          <li id="form-4">
+            <div class="layer">
+              <a href="#cedars">Cedars-Sinai</a>
+            </div>
+          </li>
+
+          <li id="form-5">
+            <div class="layer">
+              <a href="#cccc">Coalition for Compassionate Care of California</a>
+            </div>
+          </li>
+
+          <li id="form-6">
+            <div class="layer">
+              <a href="#easy">Easy-to-Read Advance Directive</a>
+              </div>
+          </li>
+
+          <li id="form-7">
+            <div class="layer">
+              <a href="#knor">Kaiser Permanente Northern California</a>
+            </div>
+          </li>
+
+          <li id="form-8">
+            <div class="layer">
+              <a href="#kso">Kaiser Permanente Southern California</a>
+            </div>
+          </li>
+
+          <li id="form-9">
+            <div class="layer">
+              <a href="#pih">PIH</a>
+            </div>
+          </li>
+
+          <li id="form-10">
+            <div class="layer">
+              <a href="#polst">POLST</a>
+            </div>
+          </li>
+
+          <li id="form-11">
+            <div class="layer">
+              <a href="#probate">Probate Code Section 4701</a>
+            </div>
+          </li>
+
+          <li id="form-12">
+            <div class="layer">
+              <a href="#sharp">Sharp</a>
+            </div>
+          </li>
+
+          <li id="form-13">
+            <div class="layer">
+              <a href="#thinking">Thinking Ahead Matters</a>
+            </div>
+          </li>
+          <li id="form-14">
+            <div class="layer">
+              <a href="#ucsf">UCSF</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info">
+        <h4 class="info-title">California Hospital Association</h4>
+
+        <ul class="info-columns">
+          <li class="form-column">
+            <h5>Form</h5>
+            <div class="info-content">
+              <div class="form-image">
+                <a href="#zoom">+</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Developed by the California Hospital Association</p>
+                  <p>1215 K St. #800 Sacramento, CA 95814</p>
+                  <p>(916) 443-7401</p>
+                </div>
+                  <section id="map-1" class="map"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English, Spanish
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Times New Roman
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 8 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  PDF
+                </div>
+
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English, Spanish
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                 PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card</h5>
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="attribute"></section>
+
+      <section id="location"></section>
+
+
+     </div>
+
+  </body>
+</html>
