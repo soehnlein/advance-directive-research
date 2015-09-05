@@ -6,16 +6,25 @@
     <title>A Comparison of California Advance Directive Forms</title>
     <link rel="stylesheet" href="assets/stylesheets/main.css">
     <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
+      maps = [
+        { 'id': 'map-cha', 'lat': 38.578738, 'lon': -121.489891 },
+        { 'id': 'map-cma', 'lat': 38.580044, 'lon': -121.490473 }
+      ]
+
       function initialize() {
-        var mapCanvas = document.getElementById('map-1');
-        var mapOptions = {
-          center: new google.maps.LatLng(38.578738, -121.489891),
-          zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
+        maps.forEach(function(map) {
+          var mapCanvas = document.getElementById(map.id)
+          var mapOptions = {
+            center: new google.maps.LatLng(map.lat, map.lon),
+            zoom: 12,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+          var map = new google.maps.Map(mapCanvas, mapOptions)
+        })
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
@@ -24,27 +33,26 @@
   <body>
 
     <header class="header">
-      <h1>
-        A Comparison of<br>
-        <span>California Advance Directive Forms</span>
-      </h1>
-      <h3 class="subhead">A project by Patrice Soehnlein of the <a href="http://arts.ucdavis.edu/design">UC Davis Design MFA Program.</a></h3>
-      <h3>Compare qualities of advance directive forms commonly used in California.</h3>
-      <h2>Explore by:</h2>
+      <div class ="title">
+        <h1>A Comparison of<br>
+         <span>CALIFORNIA ADVANCE DIRECTIVE FORMS</span>
+        </h1>
+      </div>
+      <div class="byline">
+        <h3 class="subhead">A project by Patrice Soehnlein<br>
+        of the <a href="http://arts.ucdavis.edu/design">UC Davis Design MFA Program.</a></h3>
+      </div>
     </header>
 
-    <nav>
-      <a href="#form">Form</a>
-      <a href="#attribute">Attribute</a>
-      <a href="#location">Location</a>
-    </nav>
 
      <div class="content">
-      
-      <section id="forms">
+      <section class="forms">
         <ul class="form-names">
           <li id="form-1">
-            <div class="layer"><a href="#cha">California Hospital Association</a></div>
+            <div class="layer">
+              <a href="#cha">California Hospital Association</a>
+            </div>
+            <div class="arrow"></div>
           </li>
 
           <li id="form-2">
@@ -67,13 +75,13 @@
 
           <li id="form-5">
             <div class="layer">
-              <a href="#cccc">Coalition for Compassionate Care of California</a>
+              <a href="#easy">Easy-to-Read Advance Directive</a>
             </div>
           </li>
 
           <li id="form-6">
             <div class="layer">
-              <a href="#easy">Easy-to-Read Advance Directive</a>
+              <a href="#five">Five Wishes</a>
               </div>
           </li>
 
@@ -126,35 +134,35 @@
         </ul>
       </section>
 
-      <section class="info">
+      <section class="info" id="cha" style="display: block">
         <h4 class="info-title">California Hospital Association</h4>
 
-        <ul class="info-columns">
-          <li class="form-column">
-            <h5>Form</h5>
-            <div class="info-content">
-              <div class="form-image">
-                <a href="#zoom">+</a>
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-cha">
+                  <a href="#zoom">+</a>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
 
           <li class="info-column">
             <h5>Info</h5>
               <div class="info-content">
-                <div class="contact-info">
+                <div class="contact-info" id="contact-info-cha">
                   <p>Developed by the California Hospital Association</p>
                   <p>1215 K St. #800 Sacramento, CA 95814</p>
                   <p>(916) 443-7401</p>
                 </div>
-                  <section id="map-1" class="map"></section>
-               </div>
+                <section class="map" id="map-cha"></section>
+             </div>
           </li>
 
           <li class="specs-column">
             <h5>Specs</h5>
             <div class="info-content">
-              <section class="specs-list">
+              <section class="specs-list" id="specs-cha">
                 <div>
                   <h5>Available Language(s):</h5>
                   English, Spanish
@@ -177,7 +185,7 @@
 
                 <div>
                   <h5>Format:</h5>
-                  PDF
+                  Unprotected PDF
                 </div>
 
                 <div>
@@ -191,18 +199,918 @@
                 </div>
 
                 <div>
-                  <h5>Format:</h5>
-                 PDF
+                  <h5>Wallet Card?</h5>
+                  No
+                </div>
+
+                 <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: "Principles of Consent and Advance Directives"
+                </div>
+
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info" id="cma">
+        <h4 class="info-title">California Medical Association</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-cma">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Developed by the California Medical Association</p>
+                  <p>1201 J St STE 200, Sacramento, CA 95814</p>
+                  <p>(800) 786-4262</p>
+                </div>
+                <section class="map" id="map-cma"></section>
+             </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English, Spanish
                 </div>
 
                 <div>
-                  <h5>Wallet Card</h5>
+                  <h5>Typeface(s) used:</h5>
+                  Arial
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 16 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  $6.00
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Printed Booklet
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  Yes
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: The form comes as part of a "kit".
                 </div>
               </section>
             </div>
           </li>
         </ul>
       </section>
+
+       <section class="info" id="cc">
+        <h4 class="info-title">Caring Connections</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-cc">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Published by CaringInfo, a program of NHPCO</p>
+                  <p>1731 King Street, Alexandria, VA 22314</p>
+                  <p>(703) 837-150</p>
+                </div>
+                  <section class="map" id="map-cc"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Tahoma
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 20 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Unprotected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  No
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: Various informational PDFs, including "Understanding Advance Directives" and "You Have Filled Out Your Advance Directive. Now What?
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info" id="cedars">
+        <h4 class="info-title">Cedars-Sinai</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-cedars">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Developed by Cedars-Sinai</p>
+                  <p>8700 Beverly Blvd, Los Angeles, CA 90048</p>
+                  <p>(800) 233-2771</p>
+                </div>
+                  <section class="map" id="map-cedars"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English, Spanish, Farsi, Russian
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Frutiger
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 28 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Unprotected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  Yes
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: A PDF titled "Advance Healthcare Directive Instructions for Patients".
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info" id="easy">
+        <h4 class="info-title">Easy-to-Read Advance Directive</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-easy">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Developed by the Institute for Healthcare Advancement</p>
+                  <p>501 S Idaho St # 350, La Habra, CA 90631</p>
+                  <p>(800) 434-4633</p>
+                </div>
+                  <section class="map" id="map-easy"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English, Armenian, Chinese, Farsi, Khmer, Korean, Russian, Spanish, Tagalog, Vietnamese
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Avante Garde
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 12 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Unprotected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  No
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  No
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+       <section class="info" id="five">
+        <h4 class="info-title">Five Wishes</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-five">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Published by Aging with Dignity</p>
+                  <p>3050 Highland Oaks Terrace # 2, Tallahassee, FL 32301</p>
+                  <p>(850) 681-2010</p>
+                </div>
+                  <section class="map" id="map-five"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  Albanian, Arabic, Bengali, Chinese, Croatian, Farsi, French, German, Gujarati, Haitian Creole, Hebrew, Hindi, Hmong, Ilocano, Italian, Japanese, Khmer, Korean, Polish, Portuguese, Russian, Somali, Spanish, Tagalog, Urdu, Vietnamese
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  ???
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 ???
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  $5.00
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Printed booklet, web form
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  ???
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: DVD, various PDF guides such as "Next Steps" and "Voicing my Choices"
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info" id="knor">
+        <h4 class="info-title">Kaiser Permanente Northern California</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-knor">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Developed by Kaiser Permanente</p>
+                  <p>1 Kaiser Plaza, Oakland, CA 94612</p>
+                  <p>(510) 271-5910</p>
+                </div>
+                  <section class="map" id="map-kaiser"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Helvetica Neue
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 16 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Unprotected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  No
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: An online page-by-page guide.
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info" id="kso">
+        <h4 class="info-title">Kaiser Permanente Southern California</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-kso">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Developed by Kaiser Permanente</p>
+                  <p>1 Kaiser Plaza, Oakland, CA 94612</p>
+                  <p>(510) 271-5910</p>
+                </div>
+                  <section class="map" id="map-kaiser"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English, Spanish
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Avenir (?)
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 31 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Protected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  Yes
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: The directive is part of a guiding "kit".
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info" id="pih">
+        <h4 class="info-title">PIH</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-pih">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Developed by PIH Health</p>
+                  <p>12401 Washington Blvd, Whittier, CA 90602</p>
+                  <p>(562) 698-0811</p>
+                </div>
+                  <section class="map" id="map-pih"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English, Spanish, Chinese
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Arial
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 13 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Unprotected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  No
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: The directive includes an "Advance Care Planning Guide".
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info" id="polst">
+        <h4 class="info-title">POLST California</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-polst">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Provided by the Coalition for Compassionate Care of California</p>
+                  <p>1331 Garden Highway, Suite 100, Sacramento, CA 95833</p>
+                  <p>(916) 489-2222</p>
+                </div>
+                  <section class="map" id="map-cccc"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English, Armenian, Chinese, Farsi, Hmong, Japanese, Korean, Pashto, Russian, Spanish, Tagalog, Vietnamese, Braille
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Arial
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 2 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Unprotected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  No
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: A quick-reference for physicians, a "consumer guide" and a DVD are available.
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+       <section class="info" id="probate">
+        <h4 class="info-title">Probate Code Section 4701</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-probate">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Provided by the Office of the California Attorney General</p>
+                  <p>1300 I St, 1142, Sacramento, CA 95814</p>
+                  <p>(916) 445-9555</p>
+                </div>
+                  <section class="map" id="map-probate"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Arial
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 5 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Unprotected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  No
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: A short "End-of-Life Care Checklist" on the OAG website.
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info" id="sharp">
+        <h4 class="info-title">Sharp HealthCare</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-sharp">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Developed by Sharp HealthCare</p>
+                  <p>8695 Spectrum Center Blvd., San Diego, CA 92123</p>
+                  <p>(858) 499-4000</p>
+                </div>
+                  <section class="map" id="map-sharp"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Gotham
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 15 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Unprotected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  Y
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: A page online called "Ask the Expert: What Are Advance Directives?"
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info" id="thinking">
+        <h4 class="info-title">Thinking Ahead Matters</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-thinking">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Developed by the Coalition for Compassionate Care of California</p>
+                  <p>1331 Garden Highway, Suite 100, Sacramento, CA 95833</p>
+                  <p>(916) 489-2222</p>
+                </div>
+                  <section class="map" id="map-cccc"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English, Spanish, Korean, Chinese
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Futura
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 22 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Printed Booklet or Unprotected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  Y
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: A DVD, online videos, and a workbook
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info" id="ucsf">
+        <h4 class="info-title">University of California, San Francisco</h4>
+
+          <ul class="info-columns">
+            <li class="form-column">
+              <h5>Form</h5>
+              <div class="info-content">
+                <div class="form-image" id="form-image-ucsf">
+                  <a href="#zoom">+</a>
+                </div>
+              </div>
+            </li>
+
+          <li class="info-column">
+            <h5>Info</h5>
+              <div class="info-content">
+                <div class="contact-info">
+                  <p>Developed by University of California, San Francisco</p>
+                  <p>500 Parnassus Ave, San Francisco, CA 94143</p>
+                  <p>(415) 476-9000</p>
+                </div>
+                  <section class="map" id="map-ucsf"></section>
+               </div>
+          </li>
+
+          <li class="specs-column">
+            <h5>Specs</h5>
+            <div class="info-content">
+              <section class="specs-list">
+                <div>
+                  <h5>Available Language(s):</h5>
+                  English
+                </div>
+
+                <div>
+                  <h5>Typeface(s) used:</h5>
+                  Helvetica Neue
+               </div>
+
+                <div>
+                  <h5>Length:</h5>
+                 12 pages
+                </div>
+
+                <div>
+                  <h5>Cost:</h5>
+                  Free
+                </div>
+
+                <div>
+                  <h5>Format:</h5>
+                  Unprotected PDF
+                </div>
+
+                <div>
+                  <h5>Wallet Card?</h5>
+                  No
+                </div>
+
+                <div>
+                  <h5>Supplementary materials?</h5>
+                  Yes: The form is part of a "kit".
+                </div>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+
 
       <section id="attribute"></section>
 
@@ -211,5 +1119,15 @@
 
      </div>
 
+
+
+    <script>
+      $('ul.form-names li div a').click(function() {
+        var id = $(this).attr('href')
+        $('section.info').hide()
+        $(id).fadeIn()
+        return false
+      })
+    </script>
   </body>
 </html>

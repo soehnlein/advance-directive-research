@@ -49,22 +49,48 @@ table {
 
 /* +Header */
 
-header {
-  background-color: rgb(0,33,70);
+header .title {
+  background-color: rgb(38,38,38);
+
   color: white;
-  height: 448px;
-  padding: 64px 64px 0 64px;
-  background-image: url(../../assets/images/Header-Img.png);
-  background-size: cover;
+
+  height: 66px;
+  width: 67%;
+  min-width: 768px;
+  padding: 22px 64px 8px 64px;
+  display: inline-block;
+}
+
+.byline {
+    width: 33%;
+    min-width: 256px;
+    height: 24px;
+
+    background-color: white;
+    color: black;
+
+    font-size: 12px;
+    line-height: 16px;
+
+    padding: 36px 24px 36px 24px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
 }
 
 header h1 {
-  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 150%;
 }
 
 header h1 span {
-  font-size: 48px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 22px;
   font-weight: bold;
+  letter-spacing: 0.3em;
+  font-style: normal;
 }
 
 header h2 {
@@ -72,17 +98,19 @@ header h2 {
   font-weight: bold;
 }
 
+  .subhead a {
+  }
+
   .subhead a:hover {
-    color: rgb(0,33,70);
-    text-decoration: none;
-  
-  }.subhead a {
     color: white;
-    text-decoration: none;
+  }
+
+  .subhead a:visited {
+    color: black;
   }
 
 header h3 {
-  font-size: 18px;
+  font-size: 12px;
 }
 
 header h3.subhead {
@@ -91,92 +119,84 @@ header h3.subhead {
 
 /* -Header */
 
-/* +Nav */
-
-nav {
-  margin: -64px auto 0 auto;
-  width: 840px;
-}
-
-nav a {
-  display: block;
-  float: left;
-  text-align: center;
-
-  padding: 17px 0;
-  width: 280px;
-
-  background: linear-gradient(#ccc, #b1b1b1 90%);
-
-  color: rgb(0,33,70);
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: white;
-  text-decoration: none;
-  background: #ccc;
-}
-
-/* -Nav */
-
 /* +Content */
 
 .content {
   background-color: rgb(204,204,204);
+
   height: 992px;
-  color: white;
-  padding-top: 64px;
+  padding-top: 44px;
   clear: both;
+
+  color: white;
 }
 
-#forms {
+.forms {
   margin-left: auto;
   margin-right: auto;
   width: 823.87px;
-  height: 240px;
+  height: 272px;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
 }
 
 .form-names li {
-  display: inline-block;
   height: 168px;
   width: 93.339px;
-  background-color: black;
+
+  display: inline-block;
+  position: relative;
+
   margin-right: 27px;
-  font-size: 18px;
   padding-left: 32px;
   padding-top: 72px;
   padding-right: 60px;
+  position: relative;
+
+  font-size: 18px;
   text-align: left;
+
   white-space: normal;
   vertical-align: top;
+
+  background-color: black;
   background-size: cover;
-  position: relative;
+
+
 }
 
 .form-names li .layer a{
   position: absolute;
   top: 0;
   left: 0;
+
   height: 168px;
   width: 93.339px;
+
   background: rgba(0, 0, 0, 0.65);
+
   font-size: 16px;
+  text-decoration: none;
+  color: white;
+
   padding-left: 32px;
   padding-top: 72px;
   padding-right: 60px;
-  text-decoration: none;
-  color: white;
 }
 
 .form-names li .layer a:hover{
   background: rgba(0, 0, 0, 0.45);
+}
 
+.form-names li .arrow {
+    content: url(../../assets/images/arrow.png);
+
+    height: 32px;
+    width: 104px;
+    
+    margin: 169px auto 0 auto;
+    position: absolute;
 }
 
 #form-1 {
@@ -192,10 +212,10 @@ nav a:hover {
   background-image: url(../../assets/images/cedars-cover.png);
 }
 #form-5 {
-  background-image: url(../../assets/images/cccc-cover.png);
+  background-image: url(../../assets/images/easy-cover.png);
 }
 #form-6 {
-  background-image: url(../../assets/images/easy-cover.png);
+  background-image: url(../../assets/images/five-cover.png);
 }
 #form-7 {
   background-image: url(../../assets/images/knor-cover.png);
@@ -227,20 +247,26 @@ nav a:hover {
 }
 
 .info {
-  height: 591.6px;
   width: 896px;
   padding: 32px;
-  background-color: white;
-  margin: 32px auto;
+  margin: 0 auto 32px auto;
 
+  background-color: white;
+
+  display: none;
 }
+
 .info .info-title {
-    background-color: rgb(0,33,70);
+    background-color: rgb(38, 38, 38);
     color: white;
-    font-size: 24px;
-    height: 64px;
-    padding: 32px 32px 32px 32px;
+
+    font-size: 18px;
+
+    height: 16px;
+    padding: 16px 32px 16px 32px;
     width: 824px;
+    margin: auto;
+
     border-width: 1px;
     border-top-style: solid;
     border-right-style: solid;
@@ -251,8 +277,11 @@ nav a:hover {
 
 .info .info-columns {
     width: 824px;
-    color: black;
     padding: 32px;
+    margin: auto;
+
+    color: black;
+
     border-width: 1px;
     border-top-style: none;
     border-right-style: solid;
@@ -265,10 +294,11 @@ h5 {
 }
 
 .info-columns li {
-    width: 224px;
+    width: 272px;
+    min-height: 346px;
+    position: relative;
     display: inline-block;
     padding: 0;
-    margin: 16px;
     vertical-align: top;
 }
 
@@ -279,14 +309,88 @@ h5 {
 .form-image {
   width: 221px;
   height: 214.721px;
+
   border: 1px solid black;
-  margin-top: 41px;
-  background-image: url(../../assets/images/cha-cover.png);
-  background-size: cover;
+
+  padding-top: 71px;
+
   color: black;
   font-size: 144px;
   text-align: center;
-  padding-top: 71px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#form-image-cha {
+   background-image: url(../../assets/images/cha-cover.png);
+   background-size: cover;
+}
+
+#form-image-cma {
+  background-image: url(../../assets/images/cma-cover.png);
+  background-size: cover;
+}
+
+#form-image-cc {
+  background-image: url(../../assets/images/caring-cover.png);
+  background-size: cover;
+}
+
+#form-image-cedars {
+  background-image: url(../../assets/images/cedars-cover.png);
+  background-size: cover;
+}
+
+#form-image-easy {
+  background-image: url(../../assets/images/easy-cover.png);
+  background-size: cover;
+}
+
+#form-image-five {
+  background-image: url(../../assets/images/five-cover.png);
+  background-size: cover;
+}
+
+#form-image-knor {
+  background-image: url(../../assets/images/knor-cover.png);
+  background-size: cover;
+}
+
+#form-image-kso {
+  background-image: url(../../assets/images/kso-cover.png);
+  background-size: cover;
+}
+
+#form-image-pih {
+  background-image: url(../../assets/images/pih-cover.png);
+  background-size: cover;
+}
+
+#form-image-polst {
+  background-image: url(../../assets/images/polst-cover.png);
+  background-size: cover;
+}
+
+#form-image-probate {
+  background-image: url(../../assets/images/probate-cover.png);
+  background-size: cover;
+}
+
+#form-image-sharp {
+  background-image: url(../../assets/images/sharp-cover.png);
+  background-size: cover;
+}
+
+#form-image-thinking {
+  background-image: url(../../assets/images/thinking-cover.png);
+  background-size: cover;
+}
+
+#form-image-ucsf{
+  background-image: url(../../assets/images/ucsf-cover.png);
+  background-size: cover;
 }
 
 .form-image a {
@@ -311,19 +415,31 @@ h5 {
   width: 221px;
   height: 158px;
   border: 1px solid black;
-  margin-top: 54px;
+  margin-top: 68px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .specs-list {
-  width: 204px;
+  width: 242px;
   height: 280px;
+
   overflow-y: scroll;
   overflow-x: hidden;
+
   margin: auto;
-  background-color: rgb(230, 233, 237);
-  color: black;
   padding: 16px;
+
+  background-color: rgb(230, 233, 237);
+
+  color: black;
   font-size: 14px;
+
+  border: 1px solid black;
+
+  position: absolute;
+  bottom: 0;
 }
 
 .specs-list div {
@@ -338,6 +454,7 @@ h5 {
   font-weight: bold;
 
 }
+
 /* -Content */
 
 
