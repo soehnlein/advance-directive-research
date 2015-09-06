@@ -49,6 +49,9 @@ $(document).ready(function() {
     DirectiveMaps.renderMap(id)
     $(id).show()
 
+    $('div.arrow').remove()
+    $(this).closest('li').append('<div class="arrow"></div>')
+
     // Need to trigger resize to get the map to render properly.
     google.maps.event.trigger(current_map, "resize")
     return false
