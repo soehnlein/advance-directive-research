@@ -51,31 +51,28 @@ table {
 
 header .title {
   background-color: rgb(38,38,38);
-
   color: white;
 
   height: 66px;
-  width: 67%;
-  min-width: 768px;
   padding: 22px 64px 8px 64px;
+
   display: inline-block;
+  float: left;
+  width: 67%;
+  white-space: nowrap;
 }
 
 .byline {
-    width: 33%;
-    min-width: 256px;
-    height: 24px;
+  height: 24px;
 
-    background-color: white;
-    color: black;
+  color: black;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
 
-    font-size: 12px;
-    line-height: 16px;
-
-    padding: 36px 24px 36px 24px;
-    display: inline-block;
-    vertical-align: top;
-    position: absolute;
+  padding: 36px 24px 36px 24px;
+  display: inline-block;
+  position: absolute;
 }
 
 header h1 {
@@ -194,7 +191,7 @@ header h3.subhead {
 
     height: 32px;
     width: 104px;
-    
+
     margin: 169px auto 0 auto;
     position: absolute;
 }
@@ -456,5 +453,3 @@ h5 {
 }
 
 /* -Content */
-
-
