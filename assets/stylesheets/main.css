@@ -141,7 +141,7 @@ header h3.subhead {
   white-space: nowrap;
 }
 
-.scroll-arrow-left{
+.scroll-arrow {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -149,7 +149,6 @@ header h3.subhead {
   position: absolute;
   z-index: 1;
   margin-top: 88px;
-  margin-left: -32px;
 
   background-color: black;
   opacity: .7;
@@ -159,49 +158,29 @@ header h3.subhead {
   font-weight: bold;
 }
 
-.scroll-arrow-left span{
+.left {
+  margin-left: -32px;
+  }
+
+.right {
+    margin-left: 792px;
+    text-align: right;
+    }
+
+.left span {
     margin-left: -4px;
 }
 
-.scroll-arrow-left a{
-  text-decoration: none;
-  color: white;
-}
-
-.scroll-arrow-left a:hover{
-  text-decoration: none;
-  color: rgb(204, 204, 204);
-}
-
-.scroll-arrow-right{
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-
-  position: absolute;
-  z-index: 1;
-  margin-top: 88px;
-  margin-left: 792px;
-
-  background-color: black;
-  opacity: .7;
-
-  line-height: 64px;
-  font-size: 48px;
-  font-weight: bold;
-  text-align: right;
-}
-
-.scroll-arrow-right span{
+.right span {
     margin-right: -4px;
 }
 
-.scroll-arrow-right a{
-  color: white;
+.scroll-arrow a{
   text-decoration: none;
+  color: white;
 }
 
-.scroll-arrow-right a:hover{
+.scroll-arrow a:hover{
   text-decoration: none;
   color: rgb(204, 204, 204);
 }
