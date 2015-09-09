@@ -62,20 +62,20 @@ header .title {
 }
 
 .byline {
-    width: 33%;
-    min-width: 256px;
-    height: 24px;
+  width: 33%;
+  min-width: 256px;
+  height: 24px;
 
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 
-    font-size: 12px;
-    line-height: 16px;
+  font-size: 12px;
+  line-height: 16px;
 
-    padding: 36px 24px 36px 24px;
-    display: inline-block;
-    vertical-align: top;
-    position: absolute;
+  padding: 36px 24px 36px 24px;
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
 }
 
 header h1 {
@@ -98,16 +98,13 @@ header h2 {
   font-weight: bold;
 }
 
-  .subhead a {
-  }
+.subhead a:hover {
+  color: white;
+}
 
-  .subhead a:hover {
-    color: white;
-  }
-
-  .subhead a:visited {
-    color: black;
-  }
+.subhead a:visited {
+  color: black;
+}
 
 header h3 {
   font-size: 12px;
@@ -141,6 +138,50 @@ header h3.subhead {
   white-space: nowrap;
 }
 
+.scroll-arrow {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+  position: absolute;
+  z-index: 1;
+  margin-top: 88px;
+
+  background-color: black;
+  opacity: .7;
+
+  line-height: 64px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.left {
+  margin-left: -32px;
+}
+
+.right {
+  margin-left: 792px;
+  text-align: right;
+}
+
+.left span {
+  margin-left: -4px;
+}
+
+.right span {
+  margin-right: -4px;
+}
+
+.scroll-arrow a {
+  text-decoration: none;
+  color: white;
+}
+
+.scroll-arrow a:hover{
+  text-decoration: none;
+  color: rgb(204, 204, 204);
+}
+
 .form-names li {
   height: 168px;
   width: 93.339px;
@@ -162,11 +203,9 @@ header h3.subhead {
 
   background-color: black;
   background-size: cover;
-
-
 }
 
-.form-names li .layer a{
+.form-names li .layer a {
   position: absolute;
   top: 0;
   left: 0;
@@ -185,18 +224,18 @@ header h3.subhead {
   padding-right: 60px;
 }
 
-.form-names li .layer a:hover{
+.form-names li .layer a:hover {
   background: rgba(0, 0, 0, 0.45);
 }
 
 .form-names li .arrow {
-    content: url(../../assets/images/arrow.png);
+  content: url(../../assets/images/arrow.png);
 
-    height: 32px;
-    width: 104px;
-    
-    margin: 169px auto 0 auto;
-    position: absolute;
+  height: 32px;
+  width: 104px;
+
+  margin: 169px auto 0 auto;
+  position: absolute;
 }
 
 #form-1 {
@@ -257,36 +296,36 @@ header h3.subhead {
 }
 
 .info .info-title {
-    background-color: rgb(38, 38, 38);
-    color: white;
+  background-color: rgb(38, 38, 38);
+  color: white;
 
-    font-size: 18px;
+  font-size: 18px;
 
-    height: 16px;
-    padding: 16px 32px 16px 32px;
-    width: 824px;
-    margin: auto;
+  height: 16px;
+  padding: 16px 32px 16px 32px;
+  width: 824px;
+  margin: auto;
 
-    border-width: 1px;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: none;
-    border-left-style: solid;
-    border-color: black;
+  border-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: none;
+  border-left-style: solid;
+  border-color: black;
 }
 
 .info .info-columns {
-    width: 824px;
-    padding: 32px;
-    margin: auto;
+  width: 824px;
+  padding: 32px;
+  margin: auto;
 
-    color: black;
+  color: black;
 
-    border-width: 1px;
-    border-top-style: none;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
+  border-width: 1px;
+  border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
 }
 
 h5 {
@@ -294,12 +333,12 @@ h5 {
 }
 
 .info-columns li {
-    width: 272px;
-    min-height: 346px;
-    position: relative;
-    display: inline-block;
-    padding: 0;
-    vertical-align: top;
+  width: 272px;
+  min-height: 346px;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  vertical-align: top;
 }
 
 .info-content {
@@ -324,8 +363,8 @@ h5 {
 }
 
 #form-image-cha {
-   background-image: url(../../assets/images/cha-cover.png);
-   background-size: cover;
+  background-image: url(../../assets/images/cha-cover.png);
+  background-size: cover;
 }
 
 #form-image-cma {
@@ -388,7 +427,7 @@ h5 {
   background-size: cover;
 }
 
-#form-image-ucsf{
+#form-image-ucsf {
   background-image: url(../../assets/images/ucsf-cover.png);
   background-size: cover;
 }
@@ -456,5 +495,3 @@ h5 {
 }
 
 /* -Content */
-
-
