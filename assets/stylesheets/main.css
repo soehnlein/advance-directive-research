@@ -30,6 +30,8 @@ footer, header, hgroup, menu, nav, section {
 body {
   font-family:'Cabin', sans-serif;
   line-height: 1;
+  background-color: #ccc;
+  min-width: 1024px;
 }
 ol, ul {
   list-style: none;
@@ -51,19 +53,17 @@ table {
 
 header .title {
   background-color: rgb(38,38,38);
-
   color: white;
 
   height: 66px;
-  width: 67%;
-  min-width: 768px;
   padding: 22px 64px 8px 64px;
-  display: inline-block;
+
+  float: left;
+  min-width: 67%;
+  white-space: nowrap;
 }
 
 .byline {
-  width: 33%;
-  min-width: 256px;
   height: 24px;
 
   background-color: white;
@@ -71,11 +71,10 @@ header .title {
 
   font-size: 12px;
   line-height: 16px;
+  white-space: nowrap;
 
   padding: 36px 24px 36px 24px;
-  display: inline-block;
-  vertical-align: top;
-  position: absolute;
+  overflow: hidden;
 }
 
 header h1 {
