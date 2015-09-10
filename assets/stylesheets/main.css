@@ -352,7 +352,6 @@ h5 {
 
   padding-top: 71px;
 
-  color: black;
   font-size: 144px;
   text-align: center;
 
@@ -432,8 +431,20 @@ h5 {
 }
 
 .form-image a {
-  text-decoration: none;
+  width: 221px;
+  height: 214.721px;
+
+  padding-top: 89px;
+  margin-bottom: -18px;
+
   color: black;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .form-image a:hover {
