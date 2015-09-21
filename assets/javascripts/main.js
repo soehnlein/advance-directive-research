@@ -42,20 +42,49 @@ DirectiveMaps = {
   }
 }
 
+FormList = {
+  initialize: function() {
+    this.bindEvents()
+  },
+
+  bindEvents: function() {
+    this.bindFormClick()
+    this.bindArrowClick()
+  },
+
+  bindFormClick() {
+    $('ul.form-names li div a').click(function() {
+      var id = $(this).attr('href')
+      $('section.info').hide()
+      DirectiveMaps.renderMap(id)
+      $(id).show()
+
+      $('div.arrow').remove()
+      $(this).closest('li').append('<div class="arrow"></div>')
+
+      // Need to trigger resize to get the map to render properly.
+      google.maps.event.trigger(current_map, "resize")
+      return false
+    })
+  },
+
+  bindArrowClick: function() {
+    $('.scroll-arrow a').click(function() {
+      var $forms = $('.forms')
+      var currentPos = $forms.scrollLeft()
+      var distance = $forms.find('.form-names li:first-of-type').outerWidth(true) + 5
+
+      if ($(this).attr('href').indexOf('left') > 0) {
+        distance = -distance
+      }
+
+      $forms.scrollLeft(currentPos + distance)
+      return false
+    })
+  }
+}
+
 $(document).ready(function() {
-  $('ul.form-names li div a').click(function() {
-    var id = $(this).attr('href')
-    $('section.info').hide()
-    DirectiveMaps.renderMap(id)
-    $(id).show()
-
-    $('div.arrow').remove()
-    $(this).closest('li').append('<div class="arrow"></div>')
-
-    // Need to trigger resize to get the map to render properly.
-    google.maps.event.trigger(current_map, "resize")
-    return false
-  })
-
+  FormList.initialize()
   DirectiveMaps.renderMap('cha')
 })
